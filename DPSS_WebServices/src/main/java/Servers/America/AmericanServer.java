@@ -1,4 +1,4 @@
-package main.java.Servers.Asia;
+package main.java.Servers.America;
 
 import main.java.Constants.Constants;
 import main.java.Utilities.CustomLogger;
@@ -12,7 +12,8 @@ import java.net.SocketException;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
-public class AsianServer {
+public class AmericanServer {
+
 
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
@@ -24,17 +25,17 @@ public class AsianServer {
      *
      * @param serverImpl the server
      */
-    public static void recieve(AsianServerImpl serverImpl) {
+    public static void recieve(AmericanServerImpl serverImpl) {
 
         String responseString = "";
         DatagramSocket dataSocket = null;
 
         try {
 
-            dataSocket = new DatagramSocket(Constants.SERVER_PORT_ASIA);
+            dataSocket = new DatagramSocket(Constants.SERVER_PORT_AMERICA);
             byte[] buffer = new byte[1000];
             LOGGER.info( "Server started..!!!");
-            System.out.println(Constants.SERVER_NAME_ASIA + " started at port " + Constants.SERVER_PORT_ASIA);
+
             while (true) {
                 DatagramPacket request = new DatagramPacket(buffer, buffer.length);
                 dataSocket.receive(request);
@@ -48,12 +49,13 @@ public class AsianServer {
                 if (requestMessage.split("=")[0].equalsIgnoreCase("username")) {
                     responseString = serverImpl.playerSignOut(requestMessage.split("=")[1],request_IP);
                 }else if (requestMessage.equalsIgnoreCase("transferPlayer")){
-                    System.out.println(requestMessage);
+
                     String playerString = new String(request.getData(),0,request.getLength()).split(":")[2];
                     String[] playerArray = playerString.split(",");
 
-                    responseString = serverImpl.createPlayerAccount(playerArray[0],playerArray[1],Integer.parseInt(playerArray[2]),playerArray[3],playerArray[4],String.valueOf(Constants.SERVER_IP_AMERICA));
-                } else {
+                    responseString = serverImpl.createPlayerAccount(playerArray[0],playerArray[1],Integer.parseInt(playerArray[2]),playerArray[3],playerArray[4],String.valueOf(Constants.SERVER_IP_ASIA));
+
+                }else {
                     responseString = serverImpl.getPlayerStatus("Admin", "Admin", String.valueOf(request.getPort()), false);
                 }
 
@@ -76,41 +78,45 @@ public class AsianServer {
 
     public static void main(String args[]) {
 
-        AsianServerImpl serverImplementation = new AsianServerImpl();
-        serverImplementation.serverSetup(LOGGER);
-        Thread server_asia = new Thread(()->
+        AmericanServerImpl americanServer = new AmericanServerImpl();
+        americanServer.serverSetup(LOGGER);
+
+        Thread server_america = new Thread(()->
         {
             try {
                 //setup logger
                 setupLogging();
                 //UDP setup
-                recieve(serverImplementation);
+                recieve(americanServer);
 
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("Exception at main" +e.getLocalizedMessage());
             }
         });
-        Endpoint endpoint = Endpoint.publish("http://localhost:8080/server/asia", serverImplementation);
+
+        Endpoint endpoint = Endpoint.publish("http://localhost:8080/server/america", americanServer);
         if (endpoint.isPublished()){
-            System.out.println("Asian server started");
+            System.out.println("American server started");
             LOGGER.info("********* SERVER ACTIVATED **********");
         }
-        server_asia.setName("thread_Asia_server");
-        server_asia.start();
+        server_america.setName("thread_America_server");
+        server_america.start();
 
     }
 
-    /**
+    /**stat
      * setupLogging. - Setup logger for the class
      */
     private static void setupLogging() throws IOException {
         File files = new File(Constants.SERVER_LOG_DIRECTORY);
         if (!files.exists())
             files.mkdirs();
-        files = new File(Constants.SERVER_LOG_DIRECTORY+"ASIA_Server.log");
+        files = new File(Constants.SERVER_LOG_DIRECTORY+"AMERICA_Server.log");
         if(!files.exists())
             files.createNewFile();
         fileHandler = CustomLogger.setup(files.getAbsolutePath());
     }
+
+
 }
