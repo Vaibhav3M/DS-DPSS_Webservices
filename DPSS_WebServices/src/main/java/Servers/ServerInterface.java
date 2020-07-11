@@ -1,4 +1,4 @@
-package main.java;
+package main.java.Servers;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -9,7 +9,7 @@ public interface ServerInterface {
     //Player methods
 
     /**
-     * Create player and add to hashtable.
+     * Create playeadr and add to hashtable.
      *
      * @return Return the status
      */
