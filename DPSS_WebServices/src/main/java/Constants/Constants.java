@@ -7,6 +7,11 @@ public class Constants {
     public static final int SERVER_PORT_EUROPE = 5892;
     public static final int SERVER_PORT_ASIA = 8091;
 
+    /* Game server SOAP ports */
+    public static final int SOAP_PORT_AMERICA = 8080;
+    public static final int SOAP_PORT_EUROPE = 8081;
+    public static final int SOAP_PORT_ASIA = 8082;
+
     /* Game server IPs */
     public static final int SERVER_IP_AMERICA = 132;
     public static final int SERVER_IP_EUROPE = 93;

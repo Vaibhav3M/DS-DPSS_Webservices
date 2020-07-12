@@ -16,7 +16,6 @@ import java.util.logging.Logger;
 @WebService
 public class EuropeanServer {
 
-
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     // to manage log files
@@ -97,7 +96,7 @@ public class EuropeanServer {
             }
         });
 
-        Endpoint endpoint = Endpoint.publish("http://localhost:8080/server/europe", serverImplementation);
+        Endpoint endpoint = Endpoint.publish("http://localhost:"+ Constants.SOAP_PORT_EUROPE +"/server", serverImplementation);
         if (endpoint.isPublished()){
             System.out.println("European server started");
             LOGGER.info("********* SERVER ACTIVATED **********");

@@ -91,7 +91,7 @@ public class AsianServer {
                 System.out.println("Exception at main" +e.getLocalizedMessage());
             }
         });
-        Endpoint endpoint = Endpoint.publish("http://localhost:8080/server/asia", serverImplementation);
+        Endpoint endpoint = Endpoint.publish("http://localhost:"+ Constants.SOAP_PORT_ASIA +"/server", serverImplementation);
         if (endpoint.isPublished()){
             System.out.println("Asian server started");
             LOGGER.info("********* SERVER ACTIVATED **********");

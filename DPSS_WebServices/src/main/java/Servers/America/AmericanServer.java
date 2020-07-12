@@ -95,7 +95,7 @@ public class AmericanServer {
             }
         });
 
-        Endpoint endpoint = Endpoint.publish("http://localhost:8080/server/america", americanServer);
+        Endpoint endpoint = Endpoint.publish("http://localhost:"+ Constants.SOAP_PORT_AMERICA +"/server", americanServer);
         if (endpoint.isPublished()){
             System.out.println("American server started");
             LOGGER.info("********* SERVER ACTIVATED **********");

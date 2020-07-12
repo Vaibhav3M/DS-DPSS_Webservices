@@ -12,7 +12,8 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Logger;
 
-@WebService
+@WebService(endpointInterface = "main.java.Servers.ServerInterface",
+        serviceName = "europeanServerService")
 public class EuropeanServerImpl implements ServerInterface {
 
     private static final long serialVersionUID = 7526472295622776147L;
