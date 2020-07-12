@@ -35,22 +35,22 @@ public class PlayerClient {
 
     static FileHandler fileHandler = null;
 
-    //setup CORBA object and register
-    private static boolean setupCORBA(String[] arguments){
+    //setup webservices object and register
+    private static boolean setupWebservices(String[] arguments){
         try {
 
             URL urlAmerica = new URL("http://localhost:"+ Constants.SOAP_PORT_AMERICA +"/server");
-            QName qNameAmerica = new QName("http://Servers/America/","AmericanServer");
+            QName qNameAmerica = new QName("http://America.Servers.java.main/","americaServerService");
             Service serviceAmerica  = Service.create(urlAmerica,qNameAmerica);
             serverAmerica  = serviceAmerica.getPort(ServerInterface.class);
 
             URL urlAsia = new URL("http://localhost:"+ Constants.SOAP_PORT_ASIA +"/server");
-            QName qNameAsia = new QName("http://Servers/Asia/","AsianServer");
+            QName qNameAsia = new QName("http://Asia.Servers.java.main/","asianServerService");
             Service serviceAsia  = Service.create(urlAsia,qNameAsia);
             serverAsia  = serviceAsia.getPort(ServerInterface.class);
 
             URL urlEurope = new URL("http://localhost:"+ Constants.SOAP_PORT_EUROPE +"/server");
-            QName qNameEurope = new QName("http://Servers/Europe/","EuropeanServer");
+            QName qNameEurope = new QName("http://Europe.Servers.java.main/","europeanServerService");
             Service s  = Service.create(urlEurope,qNameEurope);
             serverEurope  = s.getPort(ServerInterface.class);
 
@@ -67,8 +67,8 @@ public class PlayerClient {
 
     public static void main(String[] args) throws Exception{
         
-        // setup CORBA
-        if (!setupCORBA(args)) {
+        // setup webservices
+        if (!setupWebservices(args)) {
             System.out.println("Server setup failed, please restart session");
         }
 
