@@ -97,8 +97,7 @@ public class AmericanServer {
 
         Endpoint endpoint = Endpoint.publish("http://localhost:"+ Constants.SOAP_PORT_AMERICA +"/server", americanServer);
         if (endpoint.isPublished()){
-            System.out.println("American server started");
-            LOGGER.info("********* SERVER ACTIVATED **********");
+            System.out.println("******** American server started *********");
         }
         server_america.setName("thread_America_server");
         server_america.start();

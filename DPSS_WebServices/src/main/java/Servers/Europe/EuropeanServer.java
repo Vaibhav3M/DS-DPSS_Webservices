@@ -98,8 +98,7 @@ public class EuropeanServer {
 
         Endpoint endpoint = Endpoint.publish("http://localhost:"+ Constants.SOAP_PORT_EUROPE +"/server", serverImplementation);
         if (endpoint.isPublished()){
-            System.out.println("European server started");
-            LOGGER.info("********* SERVER ACTIVATED **********");
+            System.out.println("******** European server started **********");
         }
         server_europe.setName("thread_Europe_server");
         server_europe.start();

@@ -93,8 +93,7 @@ public class AsianServer {
         });
         Endpoint endpoint = Endpoint.publish("http://localhost:"+ Constants.SOAP_PORT_ASIA +"/server", serverImplementation);
         if (endpoint.isPublished()){
-            System.out.println("Asian server started");
-            LOGGER.info("********* SERVER ACTIVATED **********");
+            System.out.println("********** Asian server started **********");
         }
         server_asia.setName("thread_Asia_server");
         server_asia.start();
