@@ -2,14 +2,14 @@
 
 ## Distributed Player Status System (DPSS) using Web Services
 
-Submitted By : Vaibhav Malhotra - 40079373
+Submitted By : Vaibhav Malhotra - 40079373 <br>
 Github link : https://github.com/Vaibhav3M/DS-DPSS_Webservices
 
 ## Build and Run
 
 All code is written in IntelliJ IDE, Java JDK version 8.
 
-This project implements Option 1 (Build the end point files using the wsgen command before publishing the service. Import the wsdl files using the wsimport command.)
+This project implements **Option 1** (Build the end point files using the wsgen command before publishing the service. Import the wsdl files using the wsimport command.)
 
 ### IDE (IntelliJ)
 
