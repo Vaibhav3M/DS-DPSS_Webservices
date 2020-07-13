@@ -1,0 +1,20 @@
+12/07/2020 07:57:01.354 - [INFO] - testname request to create new account on AmericaGameServer
+
+12/07/2020 07:57:01.355 - [INFO] - Successful
+
+12/07/2020 07:58:25.281 - [INFO] - testname request to create new account on AsiaGameServer
+
+12/07/2020 07:58:25.282 - [INFO] - Username already exists
+
+12/07/2020 07:59:01.216 - [INFO] - testname attempted to sign in on AmericaGameServer
+
+12/07/2020 07:59:01.221 - [INFO] - testname not found
+
+12/07/2020 07:59:49.373 - [INFO] - testname attempted to sign in on AmericaGameServer
+
+12/07/2020 07:59:49.377 - [INFO] - testname has logged in.
+
+12/07/2020 08:02:26.583 - [INFO] - testname attempted to sign in on AmericaGameServer
+
+12/07/2020 08:02:26.587 - [INFO] - testname not found
+

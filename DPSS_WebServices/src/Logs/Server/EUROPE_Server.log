@@ -1,0 +1,40 @@
+12/07/2020 07:54:05.503 - [INFO] - Server started..!!!
+
+12/07/2020 07:57:01.327 - [INFO] - Received UDP request message: 2421:UserName=testname
+
+12/07/2020 07:57:01.327 - [INFO] - Player not found - Username=testname
+
+12/07/2020 07:57:01.327 - [INFO] - Sent UDP response message: User not found
+
+12/07/2020 07:57:52.153 - [INFO] - Received   request - Create Player - Player{firstName='testname2', lastName='testname2', age=24, userName='testname2', password='welcome', IPAddress='93', signedIn=false}
+
+12/07/2020 07:57:52.156 - [INFO] - Player Created successfully - Player{firstName='testname2', lastName='testname2', age=24, userName='testname2', password='welcome', IPAddress='93', signedIn=false}
+
+12/07/2020 07:58:25.254 - [INFO] - Received UDP request message: 8091:UserName=testname
+
+12/07/2020 07:58:25.254 - [INFO] - Sent UDP response message: User not found
+
+12/07/2020 07:58:47.705 - [INFO] - Received UDP request message: 8091:UserName=testname3
+
+12/07/2020 07:58:47.706 - [INFO] - Sent UDP response message: User not found
+
+12/07/2020 08:00:17.995 - [INFO] - Received   request - Create Player - Player{firstName='testname2', lastName='welcoome', age=34, userName='reandom', password='2323r4', IPAddress='93', signedIn=false}
+
+12/07/2020 08:00:17.997 - [INFO] - Player Created successfully - Player{firstName='testname2', lastName='welcoome', age=34, userName='reandom', password='2323r4', IPAddress='93', signedIn=false}
+
+12/07/2020 08:00:27.701 - [INFO] - Received   request - SignIn Player - Username=testname2
+
+12/07/2020 08:00:27.702 - [INFO] - Player SignedIn - Username=testname2
+
+12/07/2020 08:01:36.304 - [INFO] - Received UDP request message: 2421:playerstatus
+
+12/07/2020 08:01:36.304 - [INFO] - Sent UDP response message: EU: 2 online, 2 offline. 
+
+12/07/2020 08:03:08.982 - [INFO] - Received request - Transfer Player - Username= testname2 OldIP: 93 NewIP: 132
+
+12/07/2020 08:03:08.983 - [INFO] - Created UDP request - Get player status from port 2421
+
+12/07/2020 08:03:08.987 - [INFO] - Received UDP response from 2421 - Successful
+
+12/07/2020 08:03:08.987 - [INFO] - Player Username=testname2 has been transferred to  - 132
+

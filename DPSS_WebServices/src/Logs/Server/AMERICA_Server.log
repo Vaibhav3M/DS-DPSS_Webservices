@@ -1,0 +1,58 @@
+12/07/2020 07:53:56.077 - [INFO] - Server started..!!!
+
+12/07/2020 07:57:01.323 - [INFO] - Received   request - Create Player - Player{firstName='testname1', lastName='testname1', age=24, userName='testname', password='welcome', IPAddress='132', signedIn=false}
+
+12/07/2020 07:57:01.328 - [INFO] - Player Created successfully - Player{firstName='testname1', lastName='testname1', age=24, userName='testname', password='welcome', IPAddress='132', signedIn=false}
+
+12/07/2020 07:57:52.155 - [INFO] - Received UDP request message: 5892:UserName=testname2
+
+12/07/2020 07:57:52.155 - [INFO] - Sent UDP response message: User not found
+
+12/07/2020 07:58:25.253 - [INFO] - Received UDP request message: 8091:UserName=testname
+
+12/07/2020 07:58:25.253 - [INFO] - Player SignedOut - Username=testname
+
+12/07/2020 07:58:25.253 - [INFO] - Sent UDP response message: testname has logged out.
+
+12/07/2020 07:58:47.705 - [INFO] - Received UDP request message: 8091:UserName=testname3
+
+12/07/2020 07:58:47.705 - [INFO] - Sent UDP response message: User not found
+
+12/07/2020 07:59:01.220 - [INFO] - Received   request - SignIn Player - Username=testname
+
+12/07/2020 07:59:49.376 - [INFO] - Received   request - SignIn Player - Username=testname
+
+12/07/2020 07:59:49.376 - [INFO] - Player SignedIn - Username=testname
+
+12/07/2020 08:00:17.996 - [INFO] - Received UDP request message: 5892:UserName=reandom
+
+12/07/2020 08:00:17.996 - [INFO] - Player not found - Username=reandom
+
+12/07/2020 08:00:17.996 - [INFO] - Sent UDP response message: User not found
+
+12/07/2020 08:01:36.300 - [INFO] - Created UDP request - Get player status from port 8091
+
+12/07/2020 08:01:36.303 - [INFO] - Received UDP response from 8091 - AS: 2 online, 1 offline. 
+
+12/07/2020 08:01:36.303 - [INFO] - Created UDP request - Get player status from port 5892
+
+12/07/2020 08:01:36.304 - [INFO] - Received UDP response from 5892 - EU: 2 online, 2 offline. 
+
+12/07/2020 08:02:03.147 - [INFO] - Received request - Suspend Player - Username=testname
+
+12/07/2020 08:02:03.147 - [INFO] - Player Suspended - Username=testname
+
+12/07/2020 08:02:26.586 - [INFO] - Received   request - SignIn Player - Username=testname
+
+12/07/2020 08:03:08.986 - [INFO] - Received UDP request message: 5892:transferPlayer:testname2,testname2,24,testname2,welcome
+
+12/07/2020 08:03:08.986 - [INFO] - Received   request - Create Player - Player{firstName='testname2', lastName='testname2', age=24, userName='testname2', password='welcome', IPAddress='132', signedIn=false}
+
+12/07/2020 08:03:08.987 - [INFO] - Player Created successfully - Player{firstName='testname2', lastName='testname2', age=24, userName='testname2', password='welcome', IPAddress='132', signedIn=false}
+
+12/07/2020 08:03:08.987 - [INFO] - Sent UDP response message: Successful
+
+12/07/2020 08:03:27.174 - [INFO] - Received request - Suspend Player - Username=testname2
+
+12/07/2020 08:03:27.175 - [INFO] - Player Suspended - Username=testname2
+

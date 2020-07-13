@@ -1,0 +1,36 @@
+12/07/2020 07:53:59.446 - [INFO] - Server started..!!!
+
+12/07/2020 07:57:01.325 - [INFO] - Received UDP request message: 2421:UserName=testname
+
+12/07/2020 07:57:01.325 - [INFO] - Player not found - Username=testname
+
+12/07/2020 07:57:01.325 - [INFO] - Sent UDP response message: User not found
+
+12/07/2020 07:57:52.156 - [INFO] - Received UDP request message: 5892:UserName=testname2
+
+12/07/2020 07:57:52.156 - [INFO] - Player not found - Username=testname2
+
+12/07/2020 07:57:52.156 - [INFO] - Sent UDP response message: User not found
+
+12/07/2020 07:58:25.251 - [INFO] - Received   request - Create Player - Player{firstName='testname3', lastName='testname3', age=45, userName='testname', password='welcome', IPAddress='182', signedIn=false}
+
+12/07/2020 07:58:25.254 - [INFO] - Username=testname already existed
+
+12/07/2020 07:58:47.704 - [INFO] - Received   request - Create Player - Player{firstName='testname3', lastName='testname3', age=45, userName='testname3', password='welcome', IPAddress='182', signedIn=false}
+
+12/07/2020 07:58:47.706 - [INFO] - Player Created successfully - Player{firstName='testname3', lastName='testname3', age=45, userName='testname3', password='welcome', IPAddress='182', signedIn=false}
+
+12/07/2020 08:00:17.996 - [INFO] - Received UDP request message: 5892:UserName=reandom
+
+12/07/2020 08:00:17.997 - [INFO] - Player not found - Username=reandom
+
+12/07/2020 08:00:17.997 - [INFO] - Sent UDP response message: User not found
+
+12/07/2020 08:01:10.699 - [INFO] - Received   request - SignIn Player - Username=testname3
+
+12/07/2020 08:01:10.699 - [INFO] - Player SignedIn - Username=testname3
+
+12/07/2020 08:01:36.303 - [INFO] - Received UDP request message: 2421:playerstatus
+
+12/07/2020 08:01:36.303 - [INFO] - Sent UDP response message: AS: 2 online, 1 offline. 
+

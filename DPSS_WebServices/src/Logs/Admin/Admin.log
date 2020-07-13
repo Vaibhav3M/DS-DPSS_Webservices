@@ -1,0 +1,14 @@
+12/07/2020 08:01:32.589 - [INFO] - Admin logged in successfully at 132
+
+12/07/2020 08:01:36.307 - [INFO] - Admin requested player info at 132
+
+12/07/2020 08:01:36.307 - [INFO] - Info received: NA: 2 online, 1 offline. AS: 2 online, 1 offline. EU: 2 online, 2 offline. 
+
+12/07/2020 08:02:03.148 - [INFO] - Admin requested to suspend Player with Username: testname from server 132
+
+12/07/2020 08:02:03.148 - [INFO] - Info received: testname has been suspended. 
+
+12/07/2020 08:03:27.176 - [INFO] - Admin requested to suspend Player with Username: testname2 from server 132
+
+12/07/2020 08:03:27.176 - [INFO] - Info received: testname2 has been suspended. 
+
