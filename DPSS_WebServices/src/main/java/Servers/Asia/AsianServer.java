@@ -34,7 +34,7 @@ public class AsianServer {
             dataSocket = new DatagramSocket(Constants.SERVER_PORT_ASIA);
             byte[] buffer = new byte[1000];
             LOGGER.info( "Server started..!!!");
-            System.out.println(Constants.SERVER_NAME_ASIA + " started at port " + Constants.SERVER_PORT_ASIA);
+
             while (true) {
                 DatagramPacket request = new DatagramPacket(buffer, buffer.length);
                 dataSocket.receive(request);
